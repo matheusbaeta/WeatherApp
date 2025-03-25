@@ -1,15 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faMagnifyingGlass, faDroplet, faWind } from '@fortawesome/free-solid-svg-icons'
 import  notFound  from './assets/location_not_found.png'
+import './style.css'
+
+const API_KEY = import.meta.env.API_KEY
 
 const App = () => {
  return (
-  <>
   <div className='container'>
       <div className='search-box'>
-        <FontAwesomeIcon icon={faLocationDot} />
-        <input />
-        <button><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+        <FontAwesomeIcon icon={faLocationDot}  className='location-dot-icon'/>
+        <input placeholder={"Enter your location"}/>
+        <button><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
       </div>
       
       <div className="not-found">
@@ -26,7 +28,7 @@ const App = () => {
       <div className="weather-details">
 
         <div className="humidity">
-          <FontAwesomeIcon icon={faDroplet} />
+          <FontAwesomeIcon icon={faDroplet}  className='weather-icon'/>
           <div className="text">
             <span></span>
             <p>Humidity</p>
@@ -34,7 +36,7 @@ const App = () => {
         </div>
 
         <div className="wind-speed">
-          <FontAwesomeIcon icon={faWind} />
+          <FontAwesomeIcon icon={faWind}  className='weather-icon'/>
           <div className="text">
             <span></span>
             <p>Wind Speed</p>
@@ -44,7 +46,6 @@ const App = () => {
       </div>
 
   </div>
-  </>
  );
 };
 
