@@ -10,29 +10,66 @@ import weatherService from '../services/weather'
 
 import SearchBox from './components/SearchBox'
 import NotFound from './components/NotFound'
+import Weather from './components/Weather'
 
 const App = () => {
 
-  const [input, setInput] = useState("")
+  const [input, setInput] = useState("");
 
   // create type countryWeather later on
-  const [countryWeather, setCountryWeather] = useState({})
+  const [cityWeather, setCityWeather] = useState({});
 
-  const [countryFound, setCountryFound] = useState(true)
+  // 
+  const [countryFound, setCountryFound] = useState(true);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value)
+    setInput(e.target.value);
   }
 
   const searchCountry = (): void => {
    weatherService
-      .getGeolocation(input)
+      .getCity(input)
       .then(geoData => {
         const { lat, lon } = geoData[0];
         return weatherService.getWeatherConditions(lat, lon);
       })
-      .then(countryData => console.log(countryData))
-      .catch(err => console.error("ERROR"))
+      .then(countryData => {
+        const { name } = countryData;  
+        const { temp, humidity} = countryData.main;
+        const { icon } = countryData.weather[0];
+        const { speed } = countryData.wind;
+
+        const weatherObj = {
+          name:  name ,
+          temperature:  temp ,
+          humidity:  humidity ,
+          icon: icon,
+          windSpeed: speed
+        };
+
+
+
+        console.log(weatherObj);
+      
+        setCityWeather(weatherObj);
+
+        setCountryFound(true);
+      })
+      .catch(err => {
+
+        console.error(err.message)
+        setCityWeather({});
+        setCountryFound(false)
+      })
+  }
+
+  const renderIcon = (icon: string) => {
+    return (
+      <div>
+        <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} />
+        <div>ablueah</div>
+      </div>
+    )
   }
 
   const renderNotFound = (): void => {
@@ -57,9 +94,9 @@ const App = () => {
         <p>Not found!</p>
       </div> */}
 
-      {!countryFound && <NotFound/>}
+      <Weather />
 
-      <div className="weather-box">
+      {/* <div className="weather-box">
         <img />
         <p className="temperature"></p>
         <p className="description"></p>
@@ -83,8 +120,7 @@ const App = () => {
           </div>
         </div>
 
-      </div>
-
+      </div> */}
   </div>
  );
 };
