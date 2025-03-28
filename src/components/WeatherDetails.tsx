@@ -8,7 +8,7 @@ interface WeatherDetailsProps {
   windSpeed: number;
 }
 
-const WeatherDetails: FC<any> = (props) => {
+const WeatherDetails: FC<WeatherDetailsProps> = (props) => {
     return (
       <div className="weather-details">
 

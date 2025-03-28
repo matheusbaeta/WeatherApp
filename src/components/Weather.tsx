@@ -1,18 +1,15 @@
 import WeatherBox from "./WeatherBox";
 import WeatherDetails from "./WeatherDetails";
 import NotFound from "./NotFound";
-
-import { FC, useEffect } from "react";
+import {ContainerOptions, WeatherData} from '../types/index';
+import { FC } from "react";
 
 interface WeatherProps {
-    // maybe pass the properties itself instead of passing the whole object
-    weatherObj: any;
-    container: string;
+    weatherObj: WeatherData;
+    container: ContainerOptions;
 }
 
 const Weather: FC<WeatherProps> = (props) => {
-    console.log("inside of weather.tsx: ", props.weatherObj.description)
-
     if(props.container === 'start') return ;
 
     if(props.container === 'not-found') {

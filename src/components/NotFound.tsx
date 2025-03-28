@@ -4,7 +4,7 @@ const NotFound = () => {
     return (
         <div className="not-found">
             <img src={notFound} />
-            <p>Oops! Invalid location</p>
+            <p>Invalid Location!</p>
         </div>
 
     )

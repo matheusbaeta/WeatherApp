@@ -7,9 +7,8 @@ interface WeatherBoxProps {
 }
 
 const WeatherBox: FC<WeatherBoxProps> = (props) => {
+    // convert temperature to celsius
     const temp = props.temperature - 273.15
-    console.log("WEATHER BOX: ",  props.description )
-    console.log("ICON", props.icon)
 
     return (
         <div className="weather-box">
