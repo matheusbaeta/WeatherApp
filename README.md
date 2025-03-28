@@ -4,7 +4,7 @@ The **Weather App** is a simple and intuitive React application that fetches rea
 
 ## 🌍 Live Demo
 
-You can access the Weather App here: **[Weather App Website](https://www.google.com)**
+You can access the Weather App here: **[Weather App Website](https://weather-app-ramune.netlify.app/)**
 
 
 ## ✨ Features
