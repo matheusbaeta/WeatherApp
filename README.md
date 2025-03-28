@@ -16,7 +16,8 @@ The **Weather App** is a simple and intuitive React application that fetches rea
 ## 📸 Screenshots
 
 ### 🌍 Home Screen
-![Home Screen](public/images/screenshot_01.png)
+|![Home Screen](public/images/screenshot_01.png)|
+|:---:|
 
 ### 🔍 Search Result
 | ![result_nara](public/images/screenshot_02.png) | ![result_madrid](public/images/screenshot_03.png)| ![result_not_found](public/images/screenshot_04.png) |
