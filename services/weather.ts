@@ -16,7 +16,7 @@ interface WeatherData {
   }
 
 const getCity = (locationName: string): Promise<GeoLocationData[]> => {
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${locationName}&appid=${API_KEY}`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${locationName}&appid=${API_KEY}`;
     const request = axios.get(url)
     return request.then(response => response.data);
 }
