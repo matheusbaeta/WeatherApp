@@ -1,54 +1,75 @@
-# React + TypeScript + Vite
+# 🌤️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌎 Overview
 
-Currently, two official plugins are available:
+The **Weather App** is a simple and intuitive React application that fetches real-time weather data using the **OpenWeather API**. Users can enter a city or location name to retrieve current weather conditions, including temperature, humidity, wind speed, and a descriptive weather status.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ✅ Search for any city or location worldwide
+- ✅ Display current temperature 🌡️
+- ✅ Show weather conditions (e.g., Clear, Clouds, Rain) ☁️
+- ✅ Display humidity percentage 💧
+- ✅ Show wind speed 🌬️
+- ✅ User-friendly and responsive design 📱
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📷 Screenshots
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Technologies Used
+
+- **React** (Frontend Framework)
+- **TypeScript** (Static Typing)
+- **Axios** (API Requests)
+- **OpenWeather API** (Weather Data)
+- **FontAwesome** (Icons)
+- **Vite** (Build Tool)
+
+## 🚀 Installation & Setup
+
+Follow these steps to get the project running on your local machine:
+
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/your-repo/weather-app.git
+cd weather-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm install
 ```
+
+### 3️⃣ Set Up Environment Variables
+
+Create a `.env` file in the root directory and add your **OpenWeather API key**:
+
+```sh
+VITE_API_KEY=your_openweather_api_key
+```
+
+### 4️⃣ Start the Development Server
+
+```sh
+npm run dev
+```
+
+## 📝 Usage Guide
+
+1. Enter the name of a **city or location** in the search box.
+2. Click the **search button** to fetch weather data.
+3. If the city is found, the app will display:
+   - 🌡️ **Temperature**
+   - ☁️ **Weather status** (e.g., Clear, Clouds, Rain)
+   - 💧 **Humidity percentage**
+   - 🌬️ **Wind speed**
+4. If the city is **not found**, an error message will be displayed. ❌
+
+## 📜 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
+
