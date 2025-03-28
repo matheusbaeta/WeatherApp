@@ -1,8 +1,11 @@
 # 🌤️ Weather App
 
-## 🌎 Overview
-
 The **Weather App** is a simple and intuitive React application that fetches real-time weather data using the **OpenWeather API**. Users can enter a city or location name to retrieve current weather conditions, including temperature, humidity, wind speed, and a descriptive weather status.
+
+## 🌍 Live Demo
+
+You can access the Weather App here: **[Weather App Website](https://www.google.com)**
+
 
 ## ✨ Features
 
@@ -16,7 +19,8 @@ The **Weather App** is a simple and intuitive React application that fetches rea
 ## 📸 Screenshots
 
 ### 🌍 Home Screen
-![Home Screen](public/images/screenshot_01.png)
+|![Home Screen](public/images/screenshot_01.png)|
+|:---:|
 
 ### 🔍 Search Result
 | ![result_nara](public/images/screenshot_02.png) | ![result_madrid](public/images/screenshot_03.png)| ![result_not_found](public/images/screenshot_04.png) |
